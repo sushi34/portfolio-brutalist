@@ -1,0 +1,155 @@
+---
+title: "Enterprise Website Redesign"
+description: "Strategic redesign of a B2B enterprise website improving lead quality by 64% and reducing bounce rate from 78% to 42%."
+date: "2023-11-08"
+role: "Senior UX/UI Designer"
+tools: ["Figma", "Framer", "Notion", "Webflow", "Hotjar", "GA4"]
+thumbnail: "/case-studies/enterprise-hero.jpg"
+client: "Apex Industrial Solutions"
+duration: "4 months"
+category: "Website Redesign"
+featured: false
+---
+
+## The Challenge
+
+Apex Industrial Solutions, a 40-year-old industrial equipment manufacturer, had a website that hadn't been touched since 2016. It was hurting their credibility with modern buyers and generating unqualified leads.
+
+**Critical issues:**
+- 78% bounce rate, 1:04 avg session duration
+- 94% of leads unqualified (wrong industry, company size, budget)
+- No clear value proposition for 3 distinct buyer personas
+- 200+ pages with duplicate content, broken links, outdated specs
+- Not mobile responsive (45% mobile traffic, broken experience)
+- CMS impossible for marketing team to update
+- Zero SEO strategy — ranking for 12 keywords total
+
+## Research & Discovery
+
+### Stakeholder Interviews
+Interviewed 14 stakeholders across sales, marketing, engineering, and C-suite.
+
+**Key tensions:**
+- Sales: "We need more leads" vs Marketing: "We need better leads"
+- Engineering: "Show all 847 product specs" vs UX: "Buyers need guided selection"
+- CEO: "Look established/traditional" vs Market: "Look innovative/modern"
+
+### User Research
+- 8 customer interviews (recent buyers, lost deals, long-term clients)
+- Analyzed 18 months of CRM data (HubSpot)
+- Heatmaps & session recordings (Hotjar)
+- SEO audit (Ahrefs, Screaming Frog)
+
+**Buyer personas validated:**
+1. **Procurement Manager** (40%): Needs specs, pricing, compliance docs fast
+2. **Plant Engineer** (35%): Needs technical compatibility, integration guides
+3. **Operations Director** (25%): Needs ROI case studies, total cost of ownership
+
+### Competitive Gap Analysis
+Analyzed 12 competitors. Apex ranked last in:
+- Mobile usability
+- Content depth
+- Lead capture UX
+- Technical documentation access
+- Brand perception (perceived as "legacy/outdated")
+
+## Strategy
+
+### Three-Pillar Approach
+
+**1. Buyer-Guided Architecture**
+- 3 distinct entry points from homepage
+- Dynamic product finder (guided selling)
+- Persona-specific resource centers
+
+**2. Content-First Redesign**
+- Audit: 200+ pages → 68 strategic pages
+- New content: 12 case studies, 24 product guides, 8 comparison pages
+- SEO foundation: 200+ target keywords mapped to pages
+
+**3. Modern Technical Foundation**
+- Webflow CMS for marketing autonomy
+- Component-based design system
+- WCAG 2.1 AA compliance
+- Core Web Vitals optimization
+
+## Design Process
+
+### Phase 1: IA & Wireframes (3 weeks)
+- Card sorting with 12 users (open + closed)
+- Tree testing validated new IA (89% success rate)
+- Low-fi wireframes for 18 key templates
+- Stakeholder review workshops (3 sessions)
+
+### Phase 2: Design System (2 weeks)
+- Brand refresh: refined logo, expanded color system, new typography
+- 42 reusable components in Figma
+- Webflow component library mirror
+- Documentation in Notion
+
+### Phase 3: High-Fidelity Design (4 weeks)
+Key templates designed:
+- **Homepage**: Dynamic hero, persona entry points, trust indicators
+- **Product Catalog**: Faceted search, comparison tool, config wizard
+- **Product Detail**: Tabbed specs, CAD downloads, compatibility checker
+- **Resource Center**: Filterable library (case studies, whitepapers, videos)
+- **About/Leadership**: Team, certifications, sustainability, history
+- **Contact/Quote**: Multi-step form with smart routing
+
+### Phase 4: Development & Launch (3 weeks)
+- Webflow build with custom code for advanced interactions
+- 301 redirect map for 180+ URLs
+- Analytics migration (GA4 + enhanced ecommerce)
+- Staged rollout: staging → 10% traffic → 100%
+
+## Results
+
+| Metric | Before | After (90 days) | Change |
+|--------|--------|-----------------|--------|
+| Bounce Rate | 78% | 42% | **-36pp** |
+| Avg Session Duration | 1:04 | 3:52 | **+262%** |
+| Pages per Session | 1.8 | 4.3 | **+139%** |
+| Qualified Lead Rate | 6% | 70% | **+64pp** |
+| Contact Form Submissions | 12/mo | 89/mo | **+642%** |
+| Organic Keywords (top 50) | 12 | 147 | **+1125%** |
+| Mobile Conversion | 0.4% | 3.8% | **+850%** |
+| Core Web Vitals (LCP) | 4.2s | 1.1s | **-74%** |
+
+**Business impact:**
+- Sales team: "First time in years we're talking to the right people"
+- Marketing autonomy: 0 dev tickets for content updates in 6 months
+- International expansion: Site structure ready for 5 languages
+- Brand perception survey: "Modern," "Professional," "Easy to work with" (top 3)
+
+## Technical Highlights
+
+**Webflow + Custom Code:**
+- Dynamic product catalog (CMS + custom JS for comparison)
+- Multi-step quote form with conditional logic
+- Client-side search (Fuse.js) for resource center
+- Progressive image loading (IntersectionObserver)
+- Service worker for offline resource access
+
+**SEO Foundation:**
+- Schema.org markup (Product, Organization, Breadcrumb, FAQ)
+- XML sitemaps auto-generated
+- hreflang ready for i18n
+- Core Web Vitals monitoring via Vercel Analytics
+
+## Reflections
+
+**What worked:**
+- Buyer-guided IA resolved internal stakeholder conflicts
+- Webflow empowered marketing team (huge win for long-term)
+- Content audit forced strategic decisions early
+- Staged launch caught critical bugs before full rollout
+
+**What I'd do differently:**
+- Invest more in copywriting upfront (content bottleneck in Phase 3)
+- Better analytics event taxonomy from day one
+- Include sales team in user testing (they know the objections)
+- Plan for multilingual from architecture phase
+
+---
+
+*Project completed November 2023. Metrics measured 90 days post-launch. Phase 2 (i18n + customer portal) in progress.*

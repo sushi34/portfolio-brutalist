@@ -1,0 +1,130 @@
+---
+title: "SaaS Landing Page Design"
+description: "High-converting landing page for a B2B SaaS startup — 3.2x demo requests through strategic messaging hierarchy and conversion-centered design."
+date: "2024-03-22"
+role: "UX/UI Designer"
+tools: ["Figma", "Framer", "Notion", "Hotjar", "Vercel"]
+thumbnail: "/case-studies/saas-hero.jpg"
+client: "DataFlow Analytics"
+duration: "6 weeks"
+category: "Website/Landing Page Design"
+featured: true
+---
+
+## The Challenge
+
+DataFlow Analytics, a Series A B2B SaaS startup, had a landing page converting at 1.8% (demo requests/visitors). They needed a page that could support their new $2M ARR growth target and communicate their complex value proposition clearly.
+
+**The problems:**
+- Value proposition buried below the fold
+- Technical jargon alienating non-technical buyers
+- Single CTA ("Book Demo") with no lower-commitment options
+- No social proof for a new brand
+- Page speed score of 34/100 (mobile)
+- Generic stock photography undermining credibility
+
+## Research & Strategy
+
+### Audience Analysis
+Primary: Engineering managers & CTOs at 50-500 person companies
+Secondary: Data team leads, VP Engineering
+
+**Key insight:** Technical buyers want proof, not promises. They scan for: integrations, security, pricing transparency, and technical depth.
+
+### Message Mining
+Analyzed:
+- 50+ sales call recordings (Gong)
+- 200+ support tickets
+- 12 customer interviews
+- Competitor review sites (G2, Capterra)
+
+**Core value props identified:**
+1. "Cut query latency from seconds to milliseconds" (performance)
+2. "SQL interface your analysts already know" (adoption)
+3. "SOC 2 Type II certified, deployed in your VPC" (security)
+4. "Pricing that scales with value, not seats" (predictability)
+
+## Design Approach
+
+### Messaging Hierarchy
+Restructured the page around the "Problem → Solution → Proof → Action" framework:
+
+1. **Hero**: Lead with the #1 pain point + quantified outcome
+2. **Problem Section**: Agitate the status quo with data
+3. **Solution**: Feature-value mapping (not feature lists)
+4. **Social Proof**: Logos, testimonials, case study preview
+5. **Technical Deep Dive**: Expandable sections for technical buyers
+6. **Pricing**: Transparent, interactive calculator
+7. **Dual CTA**: Primary (Book Demo) + Secondary (Start Free Trial)
+
+### Conversion-Centered Design
+
+**Hero Section:**
+- Headline: "Cut analytical query latency from 4.2s to 47ms"
+- Subheadline: "Without rewriting your SQL or migrating your warehouse"
+- Primary CTA: "Book a 20-min technical demo"
+- Secondary CTA: "Start free 14-day trial" (lower commitment)
+- Trust bar: 5 logos + "SOC 2 Type II" badge
+
+**Interactive Elements:**
+- Live query latency calculator (input rows → see estimated latency)
+- Expandable architecture diagram
+- Toggle between "Business View" and "Technical View"
+
+### Performance-First Implementation
+- Next.js 14 with static generation
+- Optimized images (WebP, proper sizing)
+- Font subsetting (variable fonts)
+- Critical CSS inlined
+- Result: 98/100 mobile PageSpeed
+
+## Design System & Components
+
+Created a focused component library:
+- 24 marketing components
+- Animation system (Framer Motion) with reduced-motion support
+- Dark mode (developer audience preference)
+- Accessibility: WCAG 2.1 AA, keyboard navigation, screen reader tested
+
+## Results
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Demo Request Rate | 1.8% | 5.8% | **+222%** (3.2x) |
+| Trial Signups | 12/mo | 87/mo | **+625%** |
+| Page Load (mobile) | 4.2s | 0.8s | **-81%** |
+| Time on Page | 1:12 | 3:47 | **+218%** |
+| Scroll Depth (90%+) | 23% | 67% | **+191%** |
+| Mobile Conversion | 0.9% | 4.1% | **+355%** |
+
+**Business impact:**
+- Supported $2.3M ARR in 6 months (exceeded $2M target)
+- Reduced CAC from $2,400 to $890
+- Sales team reported "much better qualified leads"
+- Page became primary acquisition channel (60% of pipeline)
+
+## Technical Implementation
+
+Built as a standalone Next.js 14 app deployed on Vercel:
+- MDX for content management
+- Vercel Analytics + custom events for funnel tracking
+- A/B testing framework ready (post-launch)
+- Form validation with Zod + React Hook Form
+- hCaptcha for spam protection
+
+## Reflections
+
+**What worked:**
+- Technical buyers respond to specificity, not marketing fluff
+- Dual CTA captured different readiness levels
+- Performance investment directly correlated with mobile conversion
+- Interactive calculator became unexpected lead magnet
+
+**What I'd do differently:**
+- Add video testimonials (budget constraints prevented)
+- Implement scroll-based trigger animations more subtly
+- Better handoff documentation for marketing team updates
+
+---
+
+*Project completed March 2024. Metrics measured 90 days post-launch.*
