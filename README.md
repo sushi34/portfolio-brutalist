@@ -204,4 +204,4 @@ This is a personal portfolio, but suggestions welcome via issues!
 
 ---
 
-Built with ❤️ by Kian Segantini
+Built with ❤️ by Kian Segantini 
