@@ -1,17 +1,11 @@
 'use client'
 
-import { Metadata } from 'next'
 import { useState } from 'react'
-import { Mail, MapPin, Clock, Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, MapPin, Clock, Send, Loader2, CheckCircle, AlertCircle, ArrowRight, Check } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Input, Textarea } from '@/components/ui/Input'
 import { Card } from '@/components/ui/Card'
 import { motion } from 'framer-motion'
-
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch with Kian Segantini for UX/UI design, website design, landing page design, and website redesign projects. Available for freelance work worldwide.',
-}
 
 const services = [
   { value: 'ux-ui', label: 'UX/UI Design', description: 'User research, wireframes, prototypes, design systems' },
