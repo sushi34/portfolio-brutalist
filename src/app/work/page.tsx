@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { LucideIcon } from 'lucide-react'
 import { ArrowRight, PenTool, Monitor, Code, ExternalLink } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { getAllCaseStudies, getCaseStudiesByCategory } from '@/lib/mdx'
@@ -10,7 +11,13 @@ export const metadata: Metadata = {
   description: 'Selected case studies and projects — deep dives into UX/UI design, website design, and redesign work.',
 }
 
-const categories = [
+interface Category {
+  key: string
+  label: string
+  icon: LucideIcon | null
+}
+
+const categories: Category[] = [
   { key: 'all', label: 'All Projects', icon: null },
   { key: 'UX/UI Design', label: 'UX/UI Design', icon: PenTool },
   { key: 'Website/Landing Page Design', label: 'Landing Pages', icon: Monitor },
@@ -65,7 +72,11 @@ export default function WorkPage() {
                 `}
                 aria-pressed={category.key === 'all'}
               >
-                {category.icon && <category.icon className="h-4 w-4 inline mr-2" aria-hidden="true" />}
+                {category.icon && (
+                  <span className="inline-flex mr-2" aria-hidden="true">
+                    <category.icon className="h-4 w-4" />
+                  </span>
+                )}
                 {category.label}
               </button>
             ))}
@@ -121,7 +132,11 @@ export default function WorkPage() {
                     transition={{ duration: 0.6 }}
                   >
                     <h2 className="font-display font-semibold text-heading-lg text-neutral-50 mb-8 flex items-center gap-3">
-                      <category.icon className="h-6 w-6 text-accent" aria-hidden="true" />
+                      {category.icon && (
+                        <span className="inline-flex" aria-hidden="true">
+                          <category.icon className="h-6 w-6 text-accent" />
+                        </span>
+                      )}
                       {category.label}
                     </h2>
                     <div className="grid-3 mb-16">
@@ -159,7 +174,7 @@ export default function WorkPage() {
               Every project is unique. Let's discuss your specific needs and create something exceptional together.
             </p>
             <Link href="/contact" className="btn-brutal-primary inline-flex items-center gap-2">
-              Start a Project
+              View All Projects
               <ArrowRight className="h-5 w-5" />
             </Link>
           </motion.div>
@@ -170,7 +185,7 @@ export default function WorkPage() {
 }
 
 function ProjectCard({ study, index, featured = false }: { study: any; index: number; featured?: boolean }) {
-  const categoryIcons = {
+  const categoryIcons: Record<string, LucideIcon> = {
     'UX/UI Design': PenTool,
     'Website/Landing Page Design': Monitor,
     'Website Redesign': Code,
