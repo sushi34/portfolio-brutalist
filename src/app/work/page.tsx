@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { ArrowRight, PenTool, Monitor, Code, ExternalLink } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { getAllCaseStudies, getCaseStudiesByCategory } from '@/lib/mdx'
