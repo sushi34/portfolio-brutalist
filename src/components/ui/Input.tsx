@@ -1,13 +1,17 @@
 'use client'
 
-import { InputHTMLAttributes, forwardRef } from 'react'
+import { InputHTMLAttributes, TextareaHTMLAttributes, forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface BaseInputProps {
   label?: string
   error?: string
   helperText?: string
 }
+
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement>, BaseInputProps {}
+
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, BaseInputProps {}
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, label, error, helperText, id, ...props }, ref) => {
@@ -45,7 +49,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = 'Input'
 
-export const Textarea = forwardRef<HTMLTextAreaElement, Omit<InputProps, 'type'>>(
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, label, error, helperText, id, ...props }, ref) => {
     const inputId = id || label?.toLowerCase().replace(/\s+/g, '-')
 
